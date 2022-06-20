@@ -1,5 +1,5 @@
 
-// Tutte le immagini saranno nascoste, tranne la prima, che avrà una classe specifica che la renderà visibile. Al termine di questa fase ci ritroveremo con lo stesso slider stilato nella milestone 1, ma costruito dinamicamente attraverso JavaScript.
+// Adesso rimuoviamo tutto il markup statico e inseriamo tutte le immagini dinamicamente servendoci dell'array fornito e un semplice ciclo for che concatena un template literal.
 
 const imagesCarousel = [
     'https://cdn.photographycourse.net/wp-content/uploads/2022/04/Portrait-vs-Landscape-Featured-Image-3.jpg',
@@ -13,5 +13,8 @@ const imagesCarousel = [
 const imagesWrapper = document.querySelector('.carousel-wrapper .carousel-slide');
 let activeElementeIndex = 1;
 
+console.log(imagesCarousel[activeElementeIndex]);
 
-
+for (let index = 0; index < imagesCarousel.length; index++) {
+    imagesWrapper.innerHTML = `<img src="${imagesCarousel[index]}" alt="Landscape Image">`;
+}
