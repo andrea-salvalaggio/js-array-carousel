@@ -11,10 +11,15 @@ const imagesCarousel = [
 ];
 
 const imagesWrapper = document.querySelector('.carousel-wrapper .carousel-slide');
-let activeElementeIndex = 1;
+let activeElementIndex = 1;
 
-console.log(imagesCarousel[activeElementeIndex]);
+// console.log(imagesCarousel[activeElementIndex]);
 
 for (let index = 0; index < imagesCarousel.length; index++) {
-    imagesWrapper.innerHTML = `<img src="${imagesCarousel[index]}" alt="Landscape Image">`;
+    imagesWrapper.innerHTML += `<img src="${imagesCarousel[index]}" alt="Landscape Image">`;
+
 }
+
+
+
+
